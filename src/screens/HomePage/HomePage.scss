@@ -1,0 +1,32 @@
+@import "../../assets/Variables.scss";
+
+.home-page {
+    @include flex-formatter(null, null, column);
+    &__header {
+        @include flex-formatter(flex-end, null, null);
+        margin: 40px;
+    }
+    &__search-container {
+        @include flex-formatter(flex-start, center, column);
+    }
+
+    &__logo-container {
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    &__logo-text {
+        color: #484848;
+        font-weight: 700;
+        font-size: 14px;
+        position: absolute;
+        bottom: -12px;
+        right: -14px;
+    }
+
+    &_coursel-header {
+        @include flex-formatter(flex-start, null, column);
+        margin-top: 250px;
+        margin: 50px;
+    }
+}

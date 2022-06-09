@@ -1,0 +1,63 @@
+@import "../../assets/Variables.scss";
+
+.link-card {
+    @include flex-formatter(space-between, center, row, 1);
+
+    width: 100%;
+    padding: 14px 0;
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #7e7e7e;
+    }
+
+    &__container {
+        @include flex-formatter(space-between, center, row, 1);
+        height: 80px;
+
+        padding: 0 27px;
+
+        &:hover {
+            background: rgba(79, 117, 194, 0.21);
+            border-radius: 8px;
+        }
+    }
+
+    &__location-container {
+        @include flex-formatter(flex-start, center, row);
+    }
+
+    &__location {
+        @include flex-formatter(center, flex-start, column);
+        margin-left: 10px;
+    }
+
+    &__person-container {
+        @include flex-formatter(center, flex-end, column);
+    }
+
+    &__company {
+        font-size: 16px;
+        line-height: 20px;
+        color: #090a0a;
+        font-weight: 400;
+    }
+    &__address {
+        font-size: 14px;
+        line-height: 16px;
+        color: #72777a;
+    }
+    &__name-surname {
+        font-size: 16px;
+        line-height: 20px;
+        color: #484848;
+    }
+    &__date{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        color: #484848; 
+    }
+}

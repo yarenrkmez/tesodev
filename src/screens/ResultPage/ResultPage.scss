@@ -1,0 +1,66 @@
+@import "../../assets/Variables.scss";
+
+.result-page-header {
+    padding: 27px 37px;
+    box-sizing: border-box;
+
+    @include flex-formatter(space-between, center, row);
+
+    &__search-content {
+        @include flex-formatter(flex-start, center, row);
+    }
+}
+
+.result-page {
+    &__link-list-container {
+        @include flex-formatter(center, flex-start, row);
+        align-self: center;
+    }
+}
+.order-by-container {
+    &__button {
+        display: flex;
+        width: 126.28px;
+        height: 29.5px;
+        box-sizing: border-box;
+        background: #f3f2f2;
+        border: 1px solid #414141;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+
+        color: #000000;
+    }
+
+    &__popup {
+        @include flex-formatter(null, null, column);
+        width: 170.78px;
+        height: 135.11px;
+        margin-top: 15px;
+        background: #ffffff;
+        border: 1px solid #8f8f8f;
+        box-shadow: 4px 6px 12px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+
+        &__item {
+            width: 164px;
+            height: 23.74px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+
+            color: #000000;
+            padding: 7px 17px;
+            cursor: pointer;
+            &--active {
+                width: auto;
+                background: #b3b3b3;
+                border-radius: 8px;
+                padding: 7px 15px;
+                margin:4px;
+                // padding: 7px 17px;
+            }
+        }
+    }
+}

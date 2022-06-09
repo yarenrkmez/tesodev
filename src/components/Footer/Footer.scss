@@ -1,0 +1,28 @@
+@import "../../assets/Variables.scss";
+
+.footer-container {
+    background: rgba(41, 78, 152, 0.72);
+    height: 278px;
+
+    @include flex-formatter(space-between, center, row);
+
+    &__contact-container {
+        padding-left: 60px;
+        @include flex-formatter(flex-start, null, row, 1);
+    }
+
+    &__contact {
+        @include flex-formatter(space-around, flex-start, column, 1);
+
+        margin-left: 16px;
+        color: #fff;
+    }
+
+    &__map {
+        @include flex-formatter(null, null, row, 1);
+        width: 100%;
+        height: 100%;
+        padding: 27px 57px;
+        box-sizing: border-box;
+    }
+}

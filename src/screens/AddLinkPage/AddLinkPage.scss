@@ -1,0 +1,106 @@
+@import "../../assets/Variables.scss";
+
+.add-link {
+    @include flex-formatter(flex-start, flex-start, column);
+
+    &__input {
+        margin-bottom: 37px;
+    }
+
+    &__form-container {
+        width: 76%;
+        margin: 20px 0;
+
+        @include flex-formatter(flex-start, center, column);
+
+        form {
+            @include flex-formatter(flex-start, flex-start, column);
+            width: 590px;
+        }
+    }
+
+    &__submit {
+        align-self: flex-end;
+    }
+}
+.add-link-header {
+    @include flex-formatter(flex-start, center, row);
+    width: 100%;
+    padding: 27px 37px;
+    box-sizing: border-box;
+
+    &__logo {
+        height: 63px;
+        width: 149px;
+    }
+
+    &__navigation-button {
+        margin-left: 40px;
+        font-weight: 700;
+        font-size: 24px;
+        color: #484848;
+        cursor: pointer;
+    }
+}
+.popup--error-container {
+    &--hide {
+        opacity: 0;
+        transition: ease opacity 1s;
+        display: flex;
+    }
+    &--show {
+        opacity: 1;
+        transition: ease opacity 1s;
+    }
+    @include flex-formatter(flex-end, center, row);
+    width: 100%;
+    &__inside-container {
+        width: 375px;
+        left: 888px;
+        top: 753px;
+        background-color: #c4c4c4;
+        border-radius: 8px;
+        margin: 25px;
+        &__header-text {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 36px;
+            color: #090a0a;
+            padding: 25px 18px;
+        }
+        &__body-text {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 24px;
+            color: #090a0a;
+            margin: 8px 18px;
+            width: 66%;
+        }
+        &__icon-container {
+            width: 100%;
+            @include flex-formatter(flex-end, center, row);
+            margin: 0px -14px;
+            margin-top: 14px;
+        }
+        &__body--error-tag-container {
+            @include flex-formatter(flex-end null, row);
+            width: 100%;
+            margin: -17px -25px;
+            &__element {
+                @include flex-formatter(center, center, row);
+                padding: 8px 16px;
+                background: #ff4e78;
+                border-radius: 48px;
+                margin-right: 2px;
+
+                &__text {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 16px;
+                    text-align: center;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

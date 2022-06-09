@@ -1,0 +1,63 @@
+@import "../../assets/Variables.scss";
+
+.input-container {
+    @include flex-formatter(flex-start, flex-start, column);
+    width: 100%;
+
+    &__label {
+        font-size: 14px;
+        margin-bottom: 7px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: #686868;
+        margin-bottom: 17px;
+    }
+
+    &__input {
+        border-radius: 12px;
+        border: 1.5px solid #484848;
+        font-size: 18px;
+        padding: 0 17px;
+        height: 46px;
+        width: 100%;
+        box-sizing: border-box;
+        outline: none;
+
+        &:focus-visible {
+            border: 2px solid rgba(72, 72, 72, 0.6);
+        }
+
+        &--error {
+            &:focus-visible {
+                border: 1px solid red;
+            }
+
+            &::placeholder {
+                color: rgba(255, 0, 0, 0.5);
+            }
+
+            border: 1px solid red;
+        }
+
+        &--with-icon {
+            background-size: 25px;
+            padding-left: 40px;
+            background-repeat: no-repeat;
+            background-position: left 10px top 10px;
+        }
+    }
+
+    &--error {
+        color: rgba(255, 0, 0, 0.5);
+
+        .input-container__label {
+            color:rgba(255, 0, 0, 0.5)
+        }
+    }
+
+    &__error-text {
+        margin-top: 17px;
+        font-weight: 600;
+    }
+}

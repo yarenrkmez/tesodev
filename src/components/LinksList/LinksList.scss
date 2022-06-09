@@ -1,0 +1,6 @@
+@import "../../assets/Variables.scss";
+
+.link-list {
+    margin-right: 25px;
+    @include flex-formatter(flex-start, flex-start, column, .7);
+}
